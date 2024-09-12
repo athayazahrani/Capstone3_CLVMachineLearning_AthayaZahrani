@@ -1,5 +1,5 @@
-# Athaya Zahrani Irmansyah - Capstone Project Module 3 - Predistion of Customer Lifetime Value (CLV) using Machine Learning Algorithm (in Bahasa)
-_Athaya Zahrani Irmansyah as a Purwadhika JCDS-0408 Student On Site Bandung 2024 / Capstone Project Module 2 Data Analysis with Case Study NEW YORK CITY TAXIS AND LIMOUSINES COMMISSION (NYC TLC) TRIP RECORD_
+# Athaya Zahrani Irmansyah - Capstone Project Module 3 - Prediction of Customer Lifetime Value (CLV) using Machine Learning Algorithm (in Bahasa)
+_Athaya Zahrani Irmansyah as a Purwadhika JCDS-0408 Student On Site Bandung 2024 / Capstone Project Module 3 Prediction of Customer Lifetime Value (CLV) using Machine Learning Algorithm_
 
 ## Context
 For companies, acquiring new customers requires significantly more effort than retaining existing ones. Therefore, customer retention becomes crucial for maintaining stable revenue, as repeat purchases from existing customers allow the business to continue operating smoothly. For this reason, companies need to measure how valuable customers are to their business. One metric that can be used to assess this is the 1Customer Lifetime Value (CLV)1.
