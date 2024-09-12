@@ -1,40 +1,47 @@
-# Customer Lifetime Value (CLV) Prediction using Machine Learning Algorithm
-## Athaya Zahrani Irmansyah as a Purwadhika JCDS-0408 Student On Site Bandung 2024 / Capstone Project Module 3 Machine Learning (in Bahasa)
+# Athaya Zahrani Irmansyah - Capstone Project Module 3 - Predistion of Customer Lifetime Value (CLV) using Machine Learning Algorithm (in Bahasa)
+_Athaya Zahrani Irmansyah as a Purwadhika JCDS-0408 Student On Site Bandung 2024 / Capstone Project Module 2 Data Analysis with Case Study NEW YORK CITY TAXIS AND LIMOUSINES COMMISSION (NYC TLC) TRIP RECORD_
 
 ## Context
-   Bagi perusahaan, memperoleh pelanggan baru memerlukan usaha lebih sulit dibandingkan mempertahankan pelanggan yang sudah ada. Oleh karena itu, mempertahankan pelanggan (*customer retention*) menjadi kunci untuk menjaga pendapatan yang stabil bagi perusahaan, karena pembelian berulang dari pelanggan yang sudah ada memungkinkan bisnis tetap berjalan. Oleh karena itu, perusahaan perlu mengukur seberapa bernilai pelanggan bagi bisnis mereka. Salah satu metrik yang dapat digunakan untuk mengukur hal ini adalah `Customer Lifetime Value (CLV)`.
+For companies, acquiring new customers requires significantly more effort than retaining existing ones. Therefore, customer retention becomes crucial for maintaining stable revenue, as repeat purchases from existing customers allow the business to continue operating smoothly. For this reason, companies need to measure how valuable customers are to their business. One metric that can be used to assess this is the 1Customer Lifetime Value (CLV)1.
 
-CLV adalah metrik yang sangat penting dalam manajemen bisnis modern. Dengan membantu perusahaan memahami nilai jangka panjang dari pelanggan mereka, CLV memungkinkan perusahaan untuk membuat keputusan yang lebih cerdas dan strategis dalam hal pemasaran, retensi, dan pengembangan produk. Meningkatkan CLV secara langsung berkaitan dengan peningkatan profitabilitas dan stabilitas bisnis, menjadikannya alat yang sangat berharga dalam pengelolaan hubungan pelanggan.
+`CLV is a highly important metric in modern business management1. By helping companies understand the long-term value of their customers, CLV enables them to make smarter and more strategic decisions regarding marketing, retention, and product development. Improving CLV is directly linked to increasing profitability and business stability, making it a valuable tool in managing customer relationships.
 
-CLV adalah jumlah total uang yang dihabiskan oleh pelanggan untuk perusahaan selama hubungan bisnis antara pelanggan dan perusahaan tersebut berjalan. Secara sederhana, `CLV adalah perkiraan nilai total pendapatan yang dapat dihasilkan dari pelanggan`. Dalam praktiknya, metrik CLV sering digunakan oleh perusahaan yang mengandalkan penjualan berulang (seperti perusahaan makanan atau produk rumah tangga) dan perusahaan dengan model bisnis berlangganan (seperti asuransi dan perusahaan telekomunikasi).
+`CLV represents the total amount of money a customer spends on a company during the duration of their business relationship1. Simply put, 1CLV is an estimate of the total revenue a customer can generate1. In practice, the CLV metric is often used by companies that rely on repeat sales (such as food or household product companies) and businesses with a subscription model (such as insurance or telecommunications companies).
 
 ## Problem Statement
-Dataset yang digunakan pada analisis ini adalah `'data_customer_lifetime_value.csv'`. Berdasarkan data tersebut, dapat ditarik kesimpulan untuk suatu *problem statement*, yaitu mengenai `perusahaan asuransi mobil yang sedang menghadapi masalah dalam meningkatkan pendapatannya`. Salah satu kemungkinan penyebab utamanya adalah pendekatan strategi pemasaran yang kurang tepat, di mana perusahaan mengalokasikan anggaran yang sama untuk semua jenis pelanggan. Akibatnya, perusahaan menghabiskan lebih banyak uang untuk pelanggan dengan nilai rendah (*low-value customer*) dan kehilangan pelanggan dengan nilai tinggi (*high-value customer*). Untuk mengatasi masalah ini, perusahaan meminta tim *data scientist* untuk menggunakan metrik CLV demi menentukan seberapa bernilai setiap pelanggan dan menyesuaikan strategi pemasaran berdasarkan nilai tersebut. Namun, saat ini perusahaan belum memiliki sistem yang dapat memprediksi CLV dengan cepat dan akurat, sehingga penentuan strategi pemasaran menjadi lebih lambat karena masih dilakukan secara manual. Oleh karena itu, `prediksi CLV yang lebih cepat dan akurat (menggunakan algoritma *machine learning*) sangat penting untuk mendukung pengambilan keputusan pemasaran yang lebih tepat dan efektif`.
+The dataset used in this analysis is `'data_customer_lifetime_value.csv'`. Based on this data, a problem statement can be identified regarding `a car insurance company facing challenges in increasing its revenue`. One of the possible main causes is an ineffective marketing strategy, where the company allocates the same budget to all types of customers. As a result, the company spends more money on low-value customers while losing high-value customers.
+
+To address this issue, the company has tasked the data science team with using the CLV metric to determine how valuable each customer is and adjust the marketing strategy based on that value. However, the company currently lacks a system that can quickly and accurately predict CLV, which causes delays in marketing strategy decisions as they are still made manually. Therefore, `a faster and more accurate CLV prediction (using machine learning algorithms) is crucial to support more effective and precise marketing decision-making.`
 
 ## Goals
-Berdasarkan penjelasan *problem statement* di poin 2, akan sangat membantu bagi perusahaan asuransi mobil (khususnya divisi pemasaran) jika tersedia sebuah alat yang dapat memprediksi CLV dengan memanfaatkan data demografis dan data asuransi mobil pelanggan seperti yang tertera pada nama kolom dataset (`'Vehicle Class', 'Coverage', 'Renew Offer Type', 'EmploymentStatus', 'Marital Status', 'Education', 'Number of Policies', 'Monthly Premium Auto', 'Total Claim Amount', 'Income', dan 'Customer Lifetime Value'`). Dengan adanya algoritma *machine learning* sebagai alat bantu ini, diharapkan pengolahan data CLV tidak lagi harus dilakukan secara manual, sehingga dapat mempercepat proses pengambilan keputusan dalam strategi pemasaran, demi mencapai pentingnya CSV, antara lain:
+Based on the explanation of the problem statement in point 2, it would be highly beneficial for the car insurance company (particularly the marketing division) to have a tool that can predict CLV using customer demographic data and car insurance data, as reflected in the dataset columns: `'Vehicle Class', 'Coverage', 'Renew Offer Type', 'EmploymentStatus', 'Marital Status', 'Education', 'Number of Policies', 'Monthly Premium Auto', 'Total Claim Amount', 'Income', and 'Customer Lifetime Value'`. With the implementation of machine learning algorithms as this tool, the manual processing of CLV data can be eliminated, speeding up the decision-making process for marketing strategies. The importance of CLV can be realized through several key aspects, such as:
 
-1. **Optimasi Pengeluaran Pemasaran:** Dengan memahami CLV, perusahaan dapat menentukan berapa banyak yang seharusnya mereka keluarkan untuk mendapatkan pelanggan baru tanpa mengorbankan profitabilitas. CLV membantu dalam mengidentifikasi apakah kampanye pemasaran efisien dan apakah mereka berhasil menarik pelanggan yang bernilai tinggi.
-
-2. **Strategi Retensi Pelanggan:** CLV memberikan wawasan tentang pentingnya mempertahankan pelanggan yang ada. Dengan fokus pada peningkatan retensi pelanggan, perusahaan dapat meningkatkan CLV mereka dan, oleh karena itu, meningkatkan total pendapatan. Pelanggan yang tetap setia lebih cenderung melakukan pembelian berulang, memberikan rekomendasi, dan bertahan lebih lama dengan perusahaan.
-
-3. **Segmentasi Pelanggan:** Perusahaan dapat menggunakan CLV untuk mengelompokkan pelanggan berdasarkan nilai mereka. Ini memungkinkan perusahaan untuk memberikan perhatian khusus pada segmen pelanggan yang paling menguntungkan dan merancang penawaran khusus untuk mempertahankan dan meningkatkan nilai mereka.
-
-4. **Perencanaan Anggaran dan Sumber Daya:** Memahami CLV membantu perusahaan dalam merencanakan anggaran dan mengalokasikan sumber daya lebih efisien. Dengan fokus pada pelanggan dengan CLV tinggi, perusahaan dapat memprioritaskan inisiatif yang memberikan pengembalian investasi terbaik.
-
-5. **Pengembangan Produk dan Layanan:** CLV juga dapat memandu pengembangan produk dan layanan baru. Dengan mengetahui apa yang membuat pelanggan berharga tetap setia, perusahaan dapat menyesuaikan produk dan layanan mereka untuk memenuhi kebutuhan pelanggan tersebut, meningkatkan kepuasan, dan memperpanjang durasi hubungan pelanggan.
+1. **Marketing Spend Optimization**: By understanding CLV, the company can determine how much to spend on acquiring new customers without sacrificing profitability. CLV helps identify whether marketing campaigns are efficient and successful in attracting high-value customers.
+2. **Customer Retention Strategy**: CLV provides insights into the importance of retaining existing customers. By focusing on improving customer retention, companies can increase their CLV and thereby enhance total revenue. Loyal customers are more likely to make repeat purchases, offer recommendations, and remain longer with the company.
+3. **Customer Segmentation**:: Companies can use CLV to categorize customers based on their value. This enables them to give special attention to the most profitable customer segments and create tailored offers to retain and enhance their value.
+4. **Budget and Resource Planning**:: Understanding CLV helps companies plan budgets and allocate resources more efficiently. By focusing on high-CLV customers, the company can prioritize initiatives that yield the best return on investment.
+5. **Product and Service Development**:: CLV can also guide the development of new products and services. By knowing what keeps valuable customers loyal, companies can tailor their products and services to meet those customers' needs, increasing satisfaction and extending the customer relationship duration.
 
 ## Analytic Approach
-   Langkah yang akan dilakukan adalah menganalisis data yang diperoleh untuk mengidentifikasi pola dari berbagai fitur yang ada, yang dapat membedakan CLV pada masing-masing pelanggan. Model regresi akan digunakan untuk membantu perusahaan dalam menyediakan alat prediksi CLV dengan bantuan algoritma *machine learning*. Secara detail, analisis yang akan dilakukan adalah sebagai berikut:
-- Melakukan *Explantory Data Analysis (EDA)* pada dataset. 
-- Melakukan *Preprocessing* pada dataset.
-- Melakukan *Benchmarking* pada beberapa model regresi untuk memilih model yang paling tepat untuk dataset.
-- Melakukan *Hyperparameter* Tuning pada model terpilih untuk mendapatkan hasil *error* yang lebih rendah.
+The steps that will be taken involve analyzing the data to identify patterns from the various features that distinguish CLV for each customer. A regression model will be used to help the company provide a CLV prediction tool with the aid of machine learning algorithms. The detailed analysis steps are as follows:
+- Conduct Exploratory Data Analysis (EDA) on the dataset.
+- Perform Preprocessing on the dataset.
+- Benchmark several regression models to select the most suitable model for the dataset.
+- Perform Hyperparameter Tuning on the selected model to achieve lower error rates.
+These steps aim to ensure accurate CLV predictions and optimize the company's marketing strategy.
 
 ## Metric Evaluation
-  Metrik evaluasi yang akan digunakan adalah `RMSE, MAE, dan MAPE` dengan keterangan sebagai berikut:
-1. `RMSE`: Root Mean Square Error (Rataan Akar Kuadrat dari Error)
-2. `MAE`: Mean Absolute Error (Rataan Nilai Absolut dari Error)
-3. `MAPE`: Mean Absolute Percentage Error (Rataan Persentase Absolut dari Error)
+The evaluation metrics that will be used are `RMSE, MAE, and MAPE`. These metrics will help evaluate the performance of the regression models used in predicting CLV, with the following descriptions:
+- `RMSE`: Root Mean Square Error – This metric measures the square root of the average squared differences between predicted and actual values. It gives a higher weight to large errors.
+- `MAE`: Mean Absolute Error – This is the average of the absolute differences between predicted and actual values. It provides a straightforward measure of prediction accuracy.
+- `MAPE`: Mean Absolute Percentage Error – This calculates the average percentage difference between predicted and actual values, giving a sense of the error in percentage terms.
 
-Dari perhitungan yang nanti diperoleh, kita akan mengecek bahwa jika `semakin kecil nilai RMSE, MAE, dan MAPE yang dihasilkan, maka semakin akurat model tersebut dalam memprediksi CLV sesuai dengan batasan fitur yang digunakan`. Perumusan perhitungan RMSE, MAE, dan MAPE disajikan pada gambar di bawah. Pembahasan lebih lanjut akan dijelaskan dengan detail di tahapan selanjutnya.
+From the calculations obtained later, we will verify that `the smaller the values of RMSE, MAE, and MAPE, the more accurate the model is in predicting CLV`, according to the feature limitations used. This will serve as an indicator of the model's performance and its suitability for the given dataset. 
+
+---
+
+_Unlock the potential of your customer data! Discover how accurately predicting Customer Lifetime Value (CLV) can revolutionize your marketing strategy and drive higher profitability. Learn how leveraging machine learning models can provide faster, more precise insights, helping you focus on what truly matters—your most valuable customers._
+
+- Open the "AthayaZahrani_Capstone3_ML-CLV_done.ipynb" file.
+
+Thank You - Athaya Zahrani Irmansyah
